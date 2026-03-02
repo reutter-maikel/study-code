@@ -11,7 +11,7 @@ int main(void) {
 
     // TODO: complete the output statements
     printf("x = %d\n", x);
-    printf("x via p = %d\n", *p);
+    printf("x via p = %d\n", *p); // nur p dann wird die adresse ausgegeben
     printf("x via pp = %d\n", **pp);
 
     return 0;
@@ -20,9 +20,9 @@ int main(void) {
 /*
 4. What are the types of the following expressions?
 - x - integer
-- p - pointer auf adresse von x
-- *p - pointer auf value von x
-- pp - pointer auf pointer von x
-- *pp - poiinter auf adresse von pointer von x
-- **pp - pointer auf pointer auf value von x
+- p - pointer auf adresse von x -- integer pointer
+- *p - pointer auf value von x - integer
+- pp - pointer auf pointer von x - integer pointer
+- *pp - poiinter auf adresse von pointer von x -- integer pointer
+- **pp - pointer auf pointer auf value von x -- integer
 */

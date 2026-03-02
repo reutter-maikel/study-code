@@ -42,7 +42,7 @@ int main()
         {
             if (*(p_field + i) == 1)
             {
-                int direction = (rand() % 2) ? 1 : -1;
+                int direction = (rand() % 2) ? 1 : -1;  // modulo 2 bei ganzzahlen verwenden-- entweder 0 oder 1
                 int new_pos = i + direction;
 
                 if (new_pos >= 0 && new_pos < FIELD_SIZE)
