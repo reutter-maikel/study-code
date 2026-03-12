@@ -62,7 +62,7 @@ Playlist* init_playlist()
 
 void add_song(Playlist *pl, const char* title, const char* artist)
 {
-    if(pl->countSongs > MAX_SONGS)
+    if(pl->countSongs >= MAX_SONGS)
     {
         printf("The maximum of %d Songs in the playlist is reached.\n", MAX_SONGS);
         return;
@@ -89,6 +89,7 @@ void add_song(Playlist *pl, const char* title, const char* artist)
 	if (pl->phead == NULL)
 	{
 		pl->phead = newSong; // If the playlist is empty, set the new song as the head of the playlist
+		pl->countSongs++;
 		return;
 	}
 
@@ -134,12 +135,13 @@ void delete_firstSong(Playlist* pl)
 	if (pl->phead == NULL)
 	{
 		printf("Playlist is empty, no song to delete\n");
-		return; // Exit if the playlist is empty
+		return; 
 	}
 
 
 	Song* temp = pl->phead; // Store the current head of the playlist in a temporary variable
 	pl->phead = temp->pnext; // Update the head of the playlist to the next song
+
 
 	// Free the memory allocated for the deleted song
 	free(temp->arrSong_title); // Free the memory allocated for the song title of the deleted song
