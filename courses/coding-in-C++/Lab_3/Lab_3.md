@@ -111,7 +111,7 @@ Transfer your UML model into C++ code.
 - Simulate interaction (e.g. enrolling, accessing content)  
 - Call at least one method from each class  
 
-## Section II: Inheritance in C++ – Basics and Practice
+## 🟢 Section II: Inheritance in C++ – Basics and Practice
 
 In this section you will explore inheritance as a fundamental mechanism to model relationships between classes and reuse code.
 
