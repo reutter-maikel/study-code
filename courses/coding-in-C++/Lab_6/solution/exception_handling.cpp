@@ -7,8 +7,8 @@ class Sensor
 private:
     std::string name;
     double current_value;
-    double min_value;
-    double max_value;
+    const double min_value;
+    const double max_value;
 
 public:
     Sensor(const std::string &sensor_name,
